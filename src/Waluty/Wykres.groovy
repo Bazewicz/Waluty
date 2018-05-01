@@ -10,11 +10,12 @@ import org.jfree.ui.ApplicationFrame
 import java.awt.Dimension
 
 class Wykres extends ApplicationFrame{
-    Wykres(String title, String url) {
+   public Wykres(String title, String url) {
         super(title);
         String urlString = url
         String xml = Pobieranie.getXmlFileAsString(urlString)
-        final CategoryDataset dataset = XmlSeparator.createDataset(xml);
+        XmlSeparator wykres=new XmlSeparator()
+        final CategoryDataset dataset = wykres.createDataset(xml);
         final JFreeChart chart = createChart(dataset);
         final ChartPanel chartPanel = new ChartPanel(chart);
         chartPanel.setPreferredSize(new Dimension(500, 270));

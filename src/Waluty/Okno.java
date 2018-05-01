@@ -1,5 +1,7 @@
 package Waluty;
 
+import org.jfree.ui.RefineryUtilities;
+
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -24,6 +26,7 @@ public class Okno {
     JRadioButton bRadioButton;
     JRadioButton cRadioButton;
     private JButton infoOProgramieButton;
+    private JButton wykresButton;
     String dane = null;
 
     //  f
@@ -33,7 +36,7 @@ public class Okno {
         button.add(aRadioButton);
         button.add(bRadioButton);
         button.add(cRadioButton);
-
+        wykresButton.setVisible(false);
         infoButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -51,15 +54,21 @@ public class Okno {
                 String urlString = createUrlString();
                 String spr = ("http://api.nbp.pl/api/exchangerates/tables/null///?format=xml");
                 if (urlString.equals(spr)) {
+
                     JOptionPane.showMessageDialog(null, "BŁĄD! Nie podano żądnych danych do wyszukiwania\n" +
                             "Musisz podać przynajmniej rodzaj", "Błąd", 2);
                 } else {
                     if (datakon.getText().isEmpty() && datapocz.getText().isEmpty()) {
                         textArea1.setText(wy.wyswietl(urlString));
+                        if(aRadioButton.isSelected())
+                        wykresButton.setVisible(true);
                     } else if (sprawdzanie() == true) {
                         textArea1.setText(wy.wyswietl(urlString));
+                        if(aRadioButton.isSelected())
+                        wykresButton.setVisible(true);
                     }
                 }
+
             }
         });
         wyczyśćPoleButton.addMouseListener(new MouseAdapter() {
@@ -68,6 +77,7 @@ public class Okno {
                 textArea1.setText("");
                 datapocz.setText("");
                 datakon.setText("");
+                wykresButton.setVisible(false);
             }
         });
         zapiszButton.addMouseListener(new MouseAdapter() {
@@ -83,6 +93,16 @@ public class Okno {
                                 "W przypadku nie podania daty, wyświetlane są najświeższe dane.\nMaksymalny przedział to 91dni\nDane archiwalne są dostępne od 2 stycznia 2002r. (2002-01-02)",
                         "Program", 1
                 );
+            }
+        });
+        wykresButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                Wykres wy=new Wykres("Wykres walut",createUrlString());
+                wy.pack();
+                RefineryUtilities.centerFrameOnScreen(wy);
+                wy.setVisible(true);
+
             }
         });
     }
