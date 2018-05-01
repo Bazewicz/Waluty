@@ -41,10 +41,10 @@ class XmlSeparator {
          String []usd =new String[100]
          String []chf =new String[100]
          String []gbp =new String[100]
-         double wartosceur=0
-         double wartoscusd=0
-         double wartoscchf=0
-         double wartoscgbp=0
+         double wartosceur
+         double wartoscusd
+         double wartoscchf
+         double wartoscgbp
          int i=0
          int j=0
          document.ExchangeRatesTable.each {

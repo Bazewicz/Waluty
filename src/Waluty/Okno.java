@@ -1,7 +1,5 @@
 package Waluty;
 
-import org.jfree.ui.RefineryUtilities;
-
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -27,6 +25,7 @@ public class Okno {
     JRadioButton cRadioButton;
     private JButton infoOProgramieButton;
     private JButton wykresButton;
+    private JButton pdfButton;
     String dane = null;
 
     //  f
@@ -37,6 +36,7 @@ public class Okno {
         button.add(bRadioButton);
         button.add(cRadioButton);
         wykresButton.setVisible(false);
+        pdfButton.setVisible(false);
         infoButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -78,6 +78,7 @@ public class Okno {
                 datapocz.setText("");
                 datakon.setText("");
                 wykresButton.setVisible(false);
+                pdfButton.setVisible(false);
             }
         });
         zapiszButton.addMouseListener(new MouseAdapter() {
@@ -98,11 +99,18 @@ public class Okno {
         wykresButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Wykres wy=new Wykres("Wykres walut",createUrlString());
-                wy.pack();
-                RefineryUtilities.centerFrameOnScreen(wy);
-                wy.setVisible(true);
 
+                Wykres wy=new Wykres();
+                wy.wykresik(createUrlString());
+                pdfButton.setVisible(true);
+
+            }
+        });
+        pdfButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                Wykres wy=new Wykres();
+                wy.pdf(createUrlString());
             }
         });
     }
