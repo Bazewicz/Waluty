@@ -36,8 +36,8 @@
       <file leaf-file-name="Wykres.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Waluty/Wykres.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+            <state relative-caret-position="170">
+              <caret line="46" column="59" lean-forward="true" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
               <folding>
                 <element signature="e#16#51#0" expanded="true" />
               </folding>
@@ -60,14 +60,14 @@
       <file leaf-file-name="Okno.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Waluty/Okno.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-833">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="408">
+              <caret line="122" column="46" lean-forward="true" selection-start-line="122" selection-start-column="46" selection-end-line="122" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3311#3483#0" expanded="true" />
-                <element signature="e#3482#3483#0" expanded="true" />
-                <element signature="e#3936#4143#0" expanded="true" />
-                <element signature="e#4142#4143#0" expanded="true" />
+                <element signature="e#3732#4345#0" expanded="true" />
+                <element signature="e#4344#4345#0" expanded="true" />
+                <element signature="e#4383#4944#0" expanded="true" />
+                <element signature="e#4943#4944#0" expanded="true" />
                 <element signature="method#createUrlString#0;class#Okno#0" />
                 <element signature="method#sprawdzanie#0;class#Okno#0" />
               </folding>
@@ -110,8 +110,8 @@
         <option value="$PROJECT_DIR$/src/Waluty/Wyswietl.groovy" />
         <option value="$PROJECT_DIR$/src/Waluty/Main.groovy" />
         <option value="$PROJECT_DIR$/src/Waluty/XmlSeparator.groovy" />
-        <option value="$PROJECT_DIR$/src/Waluty/Okno.java" />
         <option value="$PROJECT_DIR$/src/Waluty/Okno.form" />
+        <option value="$PROJECT_DIR$/src/Waluty/Okno.java" />
         <option value="$PROJECT_DIR$/src/Waluty/Wykres.groovy" />
       </list>
     </option>
@@ -139,10 +139,6 @@
               <item name="Waluty" type="b2602c69:ProjectViewProjectNode" />
               <item name="Waluty" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Waluty" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -181,7 +177,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (4)">
+  <component name="RunManager" selected="Application.Main (3)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Waluty.Main" />
       <module name="Groovy Projeckts" />
@@ -215,7 +211,7 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Waluty.Main" />
       <module name="Groovy Projeckts" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -312,19 +308,19 @@
       <listeners />
     </configuration>
     <list>
+      <item itemvalue="Application.Main (5)" />
       <item itemvalue="Application.Main (2)" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Main (3)" />
-      <item itemvalue="Application.Main (4)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Main (5)" />
       </list>
     </recent_temporary>
   </component>
@@ -343,6 +339,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -350,9 +347,9 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50065106" side_tool="true" weight="0.24965517" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24965517" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49934897" visible="true" weight="0.24965517" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
@@ -405,7 +402,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -415,10 +412,10 @@
           <caret line="152" selection-start-line="152" selection-end-line="152" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3311#3483#0" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3936#4143#0" expanded="true" />
-            <element signature="e#4142#4143#0" expanded="true" />
+            <element signature="e#3732#4345#0" expanded="true" />
+            <element signature="e#4344#4345#0" expanded="true" />
+            <element signature="e#4383#4944#0" expanded="true" />
+            <element signature="e#4943#4944#0" expanded="true" />
             <element signature="method#createUrlString#0;class#Okno#0" />
             <element signature="method#sprawdzanie#0;class#Okno#0" />
           </folding>
@@ -459,10 +456,10 @@
           <caret line="110" selection-start-line="110" selection-end-line="110" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3311#3483#0" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3936#4143#0" expanded="true" />
-            <element signature="e#4142#4143#0" expanded="true" />
+            <element signature="e#3732#4345#0" expanded="true" />
+            <element signature="e#4344#4345#0" expanded="true" />
+            <element signature="e#4383#4944#0" expanded="true" />
+            <element signature="e#4943#4944#0" expanded="true" />
             <element signature="method#createUrlString#0;class#Okno#0" />
             <element signature="method#sprawdzanie#0;class#Okno#0" />
           </folding>
@@ -520,10 +517,10 @@
           <caret line="53" column="91" selection-start-line="53" selection-start-column="91" selection-end-line="53" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3311#3483#0" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3936#4143#0" expanded="true" />
-            <element signature="e#4142#4143#0" expanded="true" />
+            <element signature="e#3732#4345#0" expanded="true" />
+            <element signature="e#4344#4345#0" expanded="true" />
+            <element signature="e#4383#4944#0" expanded="true" />
+            <element signature="e#4943#4944#0" expanded="true" />
             <element signature="method#createUrlString#0;class#Okno#0" />
             <element signature="method#sprawdzanie#0;class#Okno#0" />
           </folding>
@@ -581,10 +578,10 @@
           <caret line="53" column="91" selection-start-line="53" selection-start-column="91" selection-end-line="53" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3311#3483#0" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3936#4143#0" expanded="true" />
-            <element signature="e#4142#4143#0" expanded="true" />
+            <element signature="e#3732#4345#0" expanded="true" />
+            <element signature="e#4344#4345#0" expanded="true" />
+            <element signature="e#4383#4944#0" expanded="true" />
+            <element signature="e#4943#4944#0" expanded="true" />
             <element signature="method#createUrlString#0;class#Okno#0" />
             <element signature="method#sprawdzanie#0;class#Okno#0" />
           </folding>
@@ -639,10 +636,10 @@
           <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3311#3483#0" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3936#4143#0" expanded="true" />
-            <element signature="e#4142#4143#0" expanded="true" />
+            <element signature="e#3732#4345#0" expanded="true" />
+            <element signature="e#4344#4345#0" expanded="true" />
+            <element signature="e#4383#4944#0" expanded="true" />
+            <element signature="e#4943#4944#0" expanded="true" />
             <element signature="method#createUrlString#0;class#Okno#0" />
             <element signature="method#sprawdzanie#0;class#Okno#0" />
           </folding>
@@ -704,10 +701,10 @@
           <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3311#3483#0" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3936#4143#0" expanded="true" />
-            <element signature="e#4142#4143#0" expanded="true" />
+            <element signature="e#3732#4345#0" expanded="true" />
+            <element signature="e#4344#4345#0" expanded="true" />
+            <element signature="e#4383#4944#0" expanded="true" />
+            <element signature="e#4943#4944#0" expanded="true" />
             <element signature="method#createUrlString#0;class#Okno#0" />
             <element signature="method#sprawdzanie#0;class#Okno#0" />
           </folding>
@@ -786,24 +783,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Waluty/Okno.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Waluty/Okno.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-833">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="408">
+          <caret line="122" column="46" lean-forward="true" selection-start-line="122" selection-start-column="46" selection-end-line="122" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3311#3483#0" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3936#4143#0" expanded="true" />
-            <element signature="e#4142#4143#0" expanded="true" />
+            <element signature="e#3732#4345#0" expanded="true" />
+            <element signature="e#4344#4345#0" expanded="true" />
+            <element signature="e#4383#4944#0" expanded="true" />
+            <element signature="e#4943#4944#0" expanded="true" />
             <element signature="method#createUrlString#0;class#Okno#0" />
             <element signature="method#sprawdzanie#0;class#Okno#0" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Waluty/Okno.form">
-      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Waluty/Wyswietl.groovy">
       <provider selected="true" editor-type-id="text-editor">
@@ -814,8 +811,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Waluty/Wykres.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        <state relative-caret-position="170">
+          <caret line="46" column="59" lean-forward="true" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
           <folding>
             <element signature="e#16#51#0" expanded="true" />
           </folding>

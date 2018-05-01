@@ -62,6 +62,7 @@ public class Okno {
                         textArea1.setText(wy.wyswietl(urlString));
                         if(aRadioButton.isSelected())
                         wykresButton.setVisible(true);
+
                     } else if (sprawdzanie() == true) {
                         textArea1.setText(wy.wyswietl(urlString));
                         if(aRadioButton.isSelected())
@@ -99,18 +100,28 @@ public class Okno {
         wykresButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
-                Wykres wy=new Wykres();
-                wy.wykresik(createUrlString());
-                pdfButton.setVisible(true);
-
+                if(bRadioButton.isSelected()){
+                    JOptionPane.showMessageDialog(null, "Wykres tylko dla Tabeli typu A!", "Błąd", 2);
+                }else if(cRadioButton.isSelected()) {
+                    JOptionPane.showMessageDialog(null, "Wykres tylko dla Tabeli typu A!", "Błąd", 2);
+                }else{
+                    Wykres wy = new Wykres();
+                    wy.wykresik(createUrlString());
+                    pdfButton.setVisible(true);
+                }
             }
         });
         pdfButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Wykres wy=new Wykres();
-                wy.pdf(createUrlString());
+                if(bRadioButton.isSelected()){
+                    JOptionPane.showMessageDialog(null, "Zapis wykresu tylko dla Tabeli typu A!", "Błąd", 2);
+                }else if(cRadioButton.isSelected()) {
+                    JOptionPane.showMessageDialog(null, "Zapis wykresu tylko dla Tabeli typu A!", "Błąd", 2);
+                }else {
+                    Wykres wy = new Wykres();
+                    wy.pdf(createUrlString());
+                }
             }
         });
     }

@@ -3,6 +3,7 @@ package Waluty
 import org.jfree.chart.ChartFactory
 import org.jfree.chart.ChartPanel
 import org.jfree.chart.JFreeChart
+import org.jfree.chart.plot.CategoryPlot
 import org.jfree.chart.plot.PlotOrientation
 import org.jfree.data.category.CategoryDataset
 import javax.swing.JFrame
@@ -16,8 +17,8 @@ import com.lowagie.text.pdf.PdfContentByte
 import com.lowagie.text.pdf.PdfTemplate
 import com.lowagie.text.pdf.PdfWriter
 import org.jfree.ui.RefineryUtilities
-
-
+import org.jfree.chart.axis.CategoryAxis
+import org.jfree.chart.axis.CategoryLabelPositions
 
 class Wykres {
     void wykresik(String url) {
@@ -37,8 +38,8 @@ class Wykres {
 
     private JFreeChart createChart(final CategoryDataset dataset) {
 
-        final JFreeChart chart = ChartFactory.createBarChart(
-                "Wykres walut",         // chart title
+        final JFreeChart chart = ChartFactory.createBarChart3D(
+                "Wykres walut z tabeli A",         // chart title
                 "Data",               // domain axis label
                 "Wartość",                  // range axis label
                 dataset,                  // data
@@ -47,8 +48,11 @@ class Wykres {
                 true,                     // tooltips?
                 false                     // URLs?
         );
-
-
+        final CategoryPlot plot = chart.getCategoryPlot();
+        final CategoryAxis domainAxis = plot.getDomainAxis();
+        domainAxis.setCategoryLabelPositions(
+                CategoryLabelPositions.createUpRotationLabelPositions(Math.PI / 5.0)
+        );
         return chart;
 
     }
