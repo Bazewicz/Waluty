@@ -32,7 +32,7 @@ class XmlSeparator {
 
         }
     }
-     CategoryDataset createDataset(String xml) {
+     CategoryDataset createDatasetA(String xml) {
          def document = new XmlParser().parseText(xml)
          Naglowek table = null
          Pozycja rate = null
@@ -88,8 +88,7 @@ class XmlSeparator {
              dataset.addValue(wartoscgbp, series4, daty[j])
             }
          }
-        return dataset;
+        return dataset
 
     }
-
 }

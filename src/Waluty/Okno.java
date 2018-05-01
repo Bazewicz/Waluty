@@ -104,9 +104,9 @@ public class Okno {
                     JOptionPane.showMessageDialog(null, "Wykres tylko dla Tabeli typu A!", "Błąd", 2);
                 }else if(cRadioButton.isSelected()) {
                     JOptionPane.showMessageDialog(null, "Wykres tylko dla Tabeli typu A!", "Błąd", 2);
-                }else{
+                }else if(aRadioButton.isSelected()) {
                     Wykres wy = new Wykres();
-                    wy.wykresik(createUrlString());
+                    wy.wykresDlaA(createUrlString());
                     pdfButton.setVisible(true);
                 }
             }

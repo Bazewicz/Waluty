@@ -1,11 +1,5 @@
 package Waluty
 
-import org.jfree.chart.ChartFactory
-import org.jfree.chart.ChartPanel
-import org.jfree.chart.JFreeChart
-import org.jfree.chart.plot.CategoryPlot
-import org.jfree.chart.plot.PlotOrientation
-import org.jfree.data.category.CategoryDataset
 import javax.swing.JFrame
 import java.awt.Graphics2D
 import java.awt.geom.Rectangle2D
@@ -16,27 +10,33 @@ import com.lowagie.text.pdf.DefaultFontMapper
 import com.lowagie.text.pdf.PdfContentByte
 import com.lowagie.text.pdf.PdfTemplate
 import com.lowagie.text.pdf.PdfWriter
-import org.jfree.ui.RefineryUtilities
 import org.jfree.chart.axis.CategoryAxis
 import org.jfree.chart.axis.CategoryLabelPositions
+import org.jfree.chart.ChartFactory
+import org.jfree.chart.ChartPanel
+import org.jfree.chart.JFreeChart
+import org.jfree.chart.plot.CategoryPlot
+import org.jfree.chart.plot.PlotOrientation
+import org.jfree.data.category.CategoryDataset
+import org.jfree.ui.RefineryUtilities
+
 
 class Wykres {
-    void wykresik(String url) {
+    void wykresDlaA(String url) {
         JFrame frame = new JFrame("Waluty")
 
         String urlString = url
         String xml = Pobieranie.getXmlFileAsString(urlString)
         XmlSeparator wykres = new XmlSeparator()
-        CategoryDataset dataset = wykres.createDataset(xml)
-        JFreeChart chart = createChart(dataset)
+        CategoryDataset dataset = wykres.createDatasetA(xml)
+        JFreeChart chart = createChartA(dataset)
         ChartPanel chartPanel = new ChartPanel(chart)
         frame.setSize(400, 300)
         frame.setContentPane(chartPanel)
         RefineryUtilities.centerFrameOnScreen(frame)
         frame.setVisible(true)
     }
-
-    private JFreeChart createChart(final CategoryDataset dataset) {
+    private JFreeChart createChartA(final CategoryDataset dataset) {
 
         final JFreeChart chart = ChartFactory.createBarChart3D(
                 "Wykres walut z tabeli A",         // chart title
@@ -48,12 +48,12 @@ class Wykres {
                 true,                     // tooltips?
                 false                     // URLs?
         );
-        final CategoryPlot plot = chart.getCategoryPlot();
-        final CategoryAxis domainAxis = plot.getDomainAxis();
+        final CategoryPlot plot = chart.getCategoryPlot()
+        final CategoryAxis domainAxis = plot.getDomainAxis()
         domainAxis.setCategoryLabelPositions(
                 CategoryLabelPositions.createUpRotationLabelPositions(Math.PI / 5.0)
         );
-        return chart;
+        return chart
 
     }
 
