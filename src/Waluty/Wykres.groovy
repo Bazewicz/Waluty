@@ -62,8 +62,8 @@ class Wykres {
        String urlString = url
        String xml = Pobieranie.getXmlFileAsString(urlString)
        XmlSeparator wykres = new XmlSeparator()
-       final CategoryDataset dataset = wykres.createDataset(xml)
-       convertToPdf(createChart(dataset), 600, 400, "wykres.pdf")
+       final CategoryDataset dataset = wykres.createDatasetA(xml)
+       convertToPdf(createChartA(dataset), 600, 400, "wykres.pdf")
 
     }
 

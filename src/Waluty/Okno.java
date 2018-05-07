@@ -121,6 +121,7 @@ public class Okno {
                 }else {
                     Wykres wy = new Wykres();
                     wy.pdf(createUrlString());
+                    JOptionPane.showMessageDialog(null, "Wykres został zapisany do pliku.", "Wykres", 1);
                 }
             }
         });
