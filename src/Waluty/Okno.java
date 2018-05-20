@@ -26,6 +26,7 @@ public class Okno {
     private JButton infoOProgramieButton;
     private JButton wykresButton;
     private JButton pdfButton;
+    private JComboBox waluty;
     String dane = null;
 
     //  f
@@ -37,6 +38,7 @@ public class Okno {
         button.add(cRadioButton);
         wykresButton.setVisible(false);
         pdfButton.setVisible(false);
+        waluty.setVisible(false);
         infoButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -66,7 +68,8 @@ public class Okno {
                     } else if (sprawdzanie() == true) {
                         textArea1.setText(wy.wyswietl(urlString));
                         if(aRadioButton.isSelected())
-                        wykresButton.setVisible(true);
+                            waluty.setVisible(true);
+                            wykresButton.setVisible(true);
                     }
                 }
 
@@ -80,6 +83,7 @@ public class Okno {
                 datakon.setText("");
                 wykresButton.setVisible(false);
                 pdfButton.setVisible(false);
+                waluty.setVisible(false);
             }
         });
         zapiszButton.addMouseListener(new MouseAdapter() {
@@ -108,6 +112,11 @@ public class Okno {
                     Wykres wy = new Wykres();
                     wy.wykresDlaA(createUrlString());
                     pdfButton.setVisible(true);
+                    if (datakon.getText().isEmpty() && datapocz.getText().isEmpty()) {}
+                    else{
+                        Wykres we = new Wykres();
+                        wy.wykres_liniowy(createUrlString(), waluty.getSelectedItem().toString());
+                    }
                 }
             }
         });

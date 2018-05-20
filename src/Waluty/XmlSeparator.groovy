@@ -91,4 +91,40 @@ class XmlSeparator {
         return dataset
 
     }
+
+    CategoryDataset createDataset_linowy(String xml, String seria) {
+        def document = new XmlParser().parseText(xml)
+        Naglowek table = null
+        Pozycja rate = null
+        String []daty =new String[100]
+        String []war =new String[100]
+        double wartosc
+        int i=0
+        int j=0
+        document.ExchangeRatesTable.each {
+
+            bk ->
+                table = new Naglowek()
+                daty[i]=bk.EffectiveDate.text()
+                bk.Rates.Rate.each {
+                    bt ->
+                        rate = new Pozycja()
+                        if (bt.Code.text()==seria)
+                            war[i]=bt.Mid.text()
+                }
+                i++
+        }
+
+        String series1 = seria
+        DefaultCategoryDataset dataset = new DefaultCategoryDataset()
+        for (j==0;j<=i;j++){
+            if(daty[j]!=null) {
+                wartosc = Double.parseDouble(war[j])
+                dataset.addValue(wartosc, series1, daty[j])
+            }
+        }
+        return dataset
+
+    }
+
 }

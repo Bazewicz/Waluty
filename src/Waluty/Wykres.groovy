@@ -1,6 +1,13 @@
 package Waluty
 
+import org.jfree.chart.StandardLegend
+import org.jfree.chart.axis.NumberAxis
+import org.jfree.chart.plot.XYPlot
+import org.jfree.chart.renderer.category.LineAndShapeRenderer
+import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer
+
 import javax.swing.JFrame
+import java.awt.Color
 import java.awt.Graphics2D
 import java.awt.geom.Rectangle2D
 import com.lowagie.text.Document
@@ -21,6 +28,9 @@ import org.jfree.data.category.CategoryDataset
 import org.jfree.ui.RefineryUtilities
 
 
+
+
+
 class Wykres {
     void wykresDlaA(String url) {
         JFrame frame = new JFrame("Waluty")
@@ -30,6 +40,21 @@ class Wykres {
         XmlSeparator wykres = new XmlSeparator()
         CategoryDataset dataset = wykres.createDatasetA(xml)
         JFreeChart chart = createChartA(dataset)
+        ChartPanel chartPanel = new ChartPanel(chart)
+        frame.setSize(400, 300)
+        frame.setContentPane(chartPanel)
+        RefineryUtilities.centerFrameOnScreen(frame)
+        frame.setVisible(true)
+    }
+
+    void wykres_liniowy(String url, String seria) {
+        JFrame frame = new JFrame("Waluty")
+
+        String urlString = url
+        String xml = Pobieranie.getXmlFileAsString(urlString)
+        XmlSeparator wykres = new XmlSeparator()
+        CategoryDataset dataset = wykres.createDataset_linowy(xml, seria)
+        JFreeChart chart = createChart_liniowy(dataset)
         ChartPanel chartPanel = new ChartPanel(chart)
         frame.setSize(400, 300)
         frame.setContentPane(chartPanel)
@@ -56,6 +81,33 @@ class Wykres {
         return chart
 
     }
+
+    private JFreeChart createChart_liniowy(final CategoryDataset dataset) {
+
+        final JFreeChart chart = ChartFactory.createLineChart(
+                "Stosunek wybranej waluty do ZŁ",         // chart title
+                "Data",               // domain axis label
+                "Wartość [zł]",                  // range axis label
+                dataset,                  // data
+                PlotOrientation.VERTICAL, // orientation
+                true,                     // include legend
+                true,                     // tooltips?
+                false                     // URLs?
+        );
+        final CategoryPlot plot = chart.getCategoryPlot()
+        final CategoryAxis domainAxis = plot.getDomainAxis()
+        domainAxis.setCategoryLabelPositions(
+                CategoryLabelPositions.createUpRotationLabelPositions(Math.PI / 5.0)
+        )
+        final LineAndShapeRenderer renderer = (LineAndShapeRenderer) plot.getRenderer();
+          renderer.setDrawShapes(true);
+        final NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
+        rangeAxis.setAutoRangeIncludesZero(false);
+        rangeAxis.setUpperMargin(0.10);
+        return chart
+
+    }
+
 
    void pdf(String url) {
 
